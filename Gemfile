@@ -118,9 +118,11 @@ gem 'sassc-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'byebug', '~> 9.0'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'faker', '~> 2.19'
+
   gem 'rspec-rails', '~> 5.0'
   gem 'rubocop', '~> 1.23', require: false
   gem 'rubocop-performance', '~> 1.11.0', require: false
