@@ -39,7 +39,7 @@ class User < ApplicationRecord
   # Roles, add other roles as required
   enum role: {
     user: 0,
-    member: 1
+    author: 1
   }, _prefix: true
 
   after_initialize :set_default_role, if: :new_record?
@@ -56,15 +56,15 @@ class User < ApplicationRecord
   # Notifications & Services
   has_many :notifications, as: :recipient
   has_many :services
-  # has_many :members
+  has_many :words
 
   private
 
   # Example role set method
   def set_alt_role
     case role.to_sym
-    when :member
-      self.role = :member
+    when :author
+      self.role = :author
     end
   end
 end
