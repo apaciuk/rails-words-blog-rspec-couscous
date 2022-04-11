@@ -14,6 +14,11 @@ describe Dog, type: :model do
       hungry_dog = Dog.new(hunger_level: 10)
       expect(hungry_dog.hungry?).to eql(true)
     end
+
+    it 'returns false if hunger level i5 5 or less' do
+      hungry_dog = Dog.new(hunger_level: 5)
+      expect(hungry_dog.hungry?).to eql(false)
+    end
   end
 end
 
