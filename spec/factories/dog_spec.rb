@@ -1,10 +1,9 @@
 # frozen_string_literal: true
-
+require 'rspec'
 require 'rails_helper'
 require_relative '../models/dog'
 
-RSpec.describe Dog, type: :model do
-  subject { Dog.new }
+describe Dog, type: :model do
   describe '#bark' do # rubocop:disable RSpec/DescribeClass
     it 'returns a string' do
       dog = Dog.new
