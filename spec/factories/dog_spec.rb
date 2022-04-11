@@ -8,7 +8,7 @@ RSpec.describe Dog, type: :model do
   describe '#bark' do # rubocop:disable RSpec/DescribeClass
     it 'returns a string' do
       dog = Dog.new
-      expect(dog.bark).to be_a(String)
+      expect(subject.bark).to be_a(String)
     end
   end
 end
