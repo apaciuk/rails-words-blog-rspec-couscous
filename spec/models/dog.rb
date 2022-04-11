@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class Dog
-  def initialize(hunger_level: 0)
+
+  def initialize(hunger_level: 0, happiness_level: 0)
     @hunger_level = hunger_level
+    @happiness_level = happiness_level
   end
 
   def bark
