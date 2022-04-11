@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     get 'users' => 'devise/sessions#new'
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  root to: 'words#index'
+  root to: 'dogs#index'
+  get 'status' => 'status#index'
 end
